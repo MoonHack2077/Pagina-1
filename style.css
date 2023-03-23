@@ -6,6 +6,7 @@
 }
 
 a{
+    color: var(--primary);
     text-decoration: none;
 }
 
@@ -26,8 +27,31 @@ body{
 }
 
 /* Header */
+header{
+    width: 100%;
+    background-color: var(--secondary);
+}
 
+header nav{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+}
+.icon__header i{
+    color: var(--primary);
+}
+ul.navigation__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
 
+li.link__navigation{
+    font-size: var(--fz_nav_link);
+}
 
 /* Main */
 
