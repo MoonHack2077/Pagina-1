@@ -1,0 +1,43 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* Variables */
+:root{
+    --primary: #fff;
+    --secondary: #000;
+    --fz_nav_link: 14px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+
+
+
+/* Main */
+
+
+
+/* Footer */
+.icon{
+    color: var(--secondary)
+}
+img{
+    width: 100px;
+    height: 100px;
+}
