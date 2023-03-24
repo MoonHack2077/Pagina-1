@@ -24,11 +24,14 @@ li{
 body{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Header */
 header{
     width: 100%;
+    height: 40px;
+    padding: 2.5px 0;
     background-color: var(--secondary);
 }
 
@@ -54,8 +57,41 @@ li.link__navigation{
 }
 
 /* Main */
-
-
+main{
+    width: 100%;
+    height: 100%;
+}
+.home__main{
+    width: 100%;
+    height: 86.9vh;
+}
+.banner__home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary);
+    color: var(--primary);
+    position: relative;
+}
+.text__banner{
+    width: 80%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+}
+.text__banner p{
+    display: inline-block;
+    margin-top: 30px;
+}
+.icon__banner{
+    position: absolute;
+    opacity: 0.1;
+}
+.icon__banner i{
+    font-size: 200px;
+}
 
 /* Footer */
 .icon{
