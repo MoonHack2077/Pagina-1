@@ -2,11 +2,11 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 a{
-    color: var(--primary);
+    color: var(--secondary);
     text-decoration: none;
 }
 
@@ -30,30 +30,36 @@ body{
 /* Header */
 header{
     width: 100%;
-    height: 40px;
+    position: fixed;
     padding: 2.5px 0;
-    background-color: var(--secondary);
 }
 
 header nav{
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    padding: 10px;
+    width: 100%;
+    padding: 10px 20px;
     margin: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--secondary);
 }
 .icon__header i{
-    color: var(--primary);
+    transform: scaleX(1.5) scaleY(1.3);
+}
+.responsive_menu{
+    display: none;
 }
 ul.navigation__header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 50%;
+    width: 80%;
+    gap: 15px;
 }
 
 li.link__navigation{
     font-size: var(--fz_nav_link);
+    font-weight: 600;
 }
 
 /* Main */
@@ -62,17 +68,22 @@ main{
     height: 100%;
 }
 .home__main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    height: 86.9vh;
+    height: 100vh;
+    color: var(--primary);
+    background-color: var(--secondary);
 }
 .banner__home{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: var(--secondary);
-    color: var(--primary);
     position: relative;
 }
 .text__banner{
@@ -92,6 +103,33 @@ main{
 .icon__banner i{
     font-size: 200px;
 }
+.icon__indicator{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.indicator, .indicator_2{
+    font-size: 20px;
+    color: var(--primary);
+    transform: rotate(-90deg) scale(2);
+}
+
+span.indicator_2{
+    position: absolute;
+    animation: jump 1s infinite ease-in-out;
+}
+
+@keyframes jump{
+    0%, 100%{
+        transform: rotate(-90deg) scale(2);
+    }
+    50%{
+        transform: translateY(-10px) rotate(-90deg) scale(2);
+        opacity: 0.5;
+    }
+}
 
 /* Footer */
 .icon{
@@ -105,12 +143,13 @@ img{
 
 /* Media Queries */
 /*
-@media (min-width: 500px){
+@media (min-width: 465px){
     .responsive_menu{
         cursor: pointer;
     }
     .responsive_menu i{
-        color: var(--primary);
+        display: flex;
+        color: var(--secondary);
     }
     ul.navigation__header{
         display: none;
