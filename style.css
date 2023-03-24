@@ -65,3 +65,27 @@ img{
     width: 100px;
     height: 100px;
 }
+
+
+/* Media Queries */
+/*
+@media (min-width: 500px){
+    .responsive_menu{
+        cursor: pointer;
+    }
+    .responsive_menu i{
+        color: var(--primary);
+    }
+    ul.navigation__header{
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        position: absolute;
+        right: -100px;
+        background-color: rgba(0,0,0,0.9);
+        height: 93.4vh;
+        padding: 20px;    
+    }
+}
+*/
