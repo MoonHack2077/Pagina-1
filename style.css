@@ -175,6 +175,44 @@ i.indicator_2{
 .icon__info i.right{
     align-self: self-end;
 }
+
+/* Services */
+.services__main{
+    text-align: center;
+}
+.services__title{
+    margin-bottom: 20px;
+    background-color: #000;
+    color: white;
+}
+.list__services{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    outline: 1px solid black;
+    max-width: 344px;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    transition: 0.4s ease-in-out;
+}
+.service_icon i{
+    font-size: 50px;
+}
+
+.service:hover{
+    background-color: var(--primary);
+    color: var(--secondary);
+}
 /* Footer */
 .icon{
     color: var(--secondary)
