@@ -1,3 +1,10 @@
+/* Variables */
+:root{
+    --primary: #fff;
+    --secondary: #000;
+    --fz_nav_link: 14px;
+}
+
 /* General */
 *{
     margin: 0;
@@ -14,17 +21,14 @@ li{
     list-style-type: none;
 }
 
-/* Variables */
-:root{
-    --primary: #fff;
-    --secondary: #000;
-    --fz_nav_link: 14px;
-}
-
 body{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+}
+
+section{
+    padding: 20px;
 }
 
 /* Header */
@@ -67,6 +71,7 @@ main{
     width: 100%;
     height: 100%;
 }
+/* Home */
 .home__main{
     display: flex;
     justify-content: space-between;
@@ -76,6 +81,7 @@ main{
     height: 100vh;
     color: var(--primary);
     background-color: var(--secondary);
+    padding: 0;
 }
 .banner__home{
     display: flex;
@@ -113,24 +119,62 @@ main{
 .indicator, .indicator_2{
     font-size: 20px;
     color: var(--primary);
-    transform: rotate(-90deg) scale(2);
+    transform: rotate(180deg) scale(2);
 }
 
-span.indicator_2{
+i.indicator_2{
     position: absolute;
     animation: jump 1s infinite ease-in-out;
 }
 
 @keyframes jump{
     0%, 100%{
-        transform: rotate(-90deg) scale(2);
+        transform: rotate(180deg) scale(2);
     }
     50%{
-        transform: translateY(-10px) rotate(-90deg) scale(2);
+        transform: translateY(-15px) rotate(180deg) scale(2);
         opacity: 0.5;
     }
 }
 
+/* About */
+.about__main{
+    width: 100%;
+}
+.info__about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.text__info{
+    text-align: center;
+    width: 100%;
+    max-width: 448px;
+}
+.description__info{
+    margin-top: 20px;
+}
+.icon__info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    max-width: 380px;
+    outline: 1px solid black;
+    border-radius: 50px 0 50px;
+    padding: 10px
+}
+.icon__info i{
+    font-size: 100px;
+}
+.icon__info i.left{
+    align-self: self-start;
+}
+.icon__info i.right{
+    align-self: self-end;
+}
 /* Footer */
 .icon{
     color: var(--secondary)
@@ -166,5 +210,21 @@ img{
 
     li.link__navigation a{
         color: var(--primary);
+    }
+}
+
+
+@media (max-width: 620px){
+    .info__about{
+        flex-wrap: wrap;
+    }
+    .icon__info{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        min-width: 210px;
+    }
+    .icon__info i{
+        font-size: 80px;
     }
 }
