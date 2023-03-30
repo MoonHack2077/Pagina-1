@@ -36,6 +36,7 @@ header{
     width: 100%;
     position: fixed;
     padding: 2.5px 0;
+    z-index: 50;
 }
 
 header nav{
@@ -107,8 +108,19 @@ main{
     opacity: 0.1;
 }
 .icon__banner i{
+    animation: reluciente 2s cubic-bezier(.96,.1,.06,.9) 0s infinite alternate forwards;
     font-size: 200px;
 }
+
+@keyframes reluciente {
+    0%, 100% {
+        filter: brightness(0.5);
+    }
+    50%{
+        filter: brightness(200%);
+    }
+}
+
 .icon__indicator{
     display: flex;
     width: 100%;
@@ -300,4 +312,19 @@ footer{
     .icon__info i{
         font-size: 80px;
     }
+}
+
+
+.wpp{
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 100%;
+    background-color: green;
+}
+.wpp i{
+    font-size: 50px;
+    color: white;
 }
